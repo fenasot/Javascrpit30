@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="./index.js"></script>
+</head>
+
+<body>
+
+  <div class="mainpage">
+    <span data-key="65" class="key">
+      <kbd>A</kbd>
+      <div class="sound">clap</div>
+    </span>
+    <span data-key="83" class="key">
+      <kbd>S</kbd>
+      <div class="sound">hihat</div>
+    </span>
+    <span data-key="68" class="key">
+      <kbd>D</kbd>
+      <div class="sound">kick</div>
+    </span>
+    <span data-key="70" class="key">
+      <kbd>F</kbd>
+      <div class="sound">openhat</div>
+    </span>
+    <span data-key="71" class="key">
+      <kbd>G</kbd>
+      <div class="sound">tink</div>
+    </span>
+    <span data-key="72" class="key">
+      <kbd>H</kbd>
+      <div class="sound">boom</div>
+    </span>
+    <span data-key="74" class="key">
+      <kbd>J</kbd>
+      <div class="sound">ride</div>
+    </span>
+    <span data-key="75" class="key">
+      <kbd>K</kbd>
+      <div class="sound">snape</div>
+    </span>
+    <span data-key="76" class="key">
+      <kbd>L</kbd>
+      <div class="sound">tom</div>
+    </span>
+
+  </div>
+
+
+  <audio data-key="65" src="./sound/clap.wav"></audio>
+  <audio data-key="83" src="./sound/clap.wav"></audio>
+  <audio data-key="68" src="./sound/kick.mp3"></audio>
+  <audio data-key="70" src="./sound/clap.wav"></audio>
+  <audio data-key="71" src="./sound/clap.wav"></audio>
+  <audio data-key="72" src="./sound/clap.wav"></audio>
+  <audio data-key="74" src="./sound/clap.wav"></audio>
+  <audio data-key="75" src="./sound/clap.wav"></audio>
+  <audio data-key="76" src="./sound/clap.wav"></audio>
+
+  <script>
+    window.addEventListener("keydown", keydown);
+    /*window.addEventListener("keydown", function keydown(e) {
+      console.log(e.keyCode);
+      const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
+      audio.play();
+    })*/
+    const keys = document.querySelectorAll(".key");
+    keys.forEach((key) =>
+      key.addEventListener("transitionend", removeTransitionend)
+    );
+  </script>
+</body>
+
+</html>
