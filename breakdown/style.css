@@ -1,0 +1,48 @@
+.mainp1 {
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  font-size: 0;
+  vertical-align: top;
+}
+#contenttext {
+  height: 400px;
+  width: 400px;
+  font-size: 16px;
+  color: black;
+  background-color: #ffffff;
+  display: inline-block;
+  overflow: scroll; 
+}
+#sendtext {
+  height: 100px;
+  width: 300px;
+  font-size: 16px;
+  background-color: yellowgreen;
+  color: black;
+  
+}
+#output {
+  height: 402px;
+  width: 400px;
+  font-size: 16px;
+  color: black;
+  margin-left: 10px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  display: inline-block;
+  vertical-align: top;
+  white-space: pre;
+  overflow-y: scroll; 
+}
+.titlebox{
+  display: inline-block;
+  vertical-align: top;
+}
+.titletext, .titletext2{
+  width: 410px;
+  font-size: 20px;
+  color: #000000;
+  display: inline-block;
+  
+}

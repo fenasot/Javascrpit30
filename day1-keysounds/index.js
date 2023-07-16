@@ -11,6 +11,6 @@ function keydown(e) {
 
 function removeTransitionend(e) {
   if (e.propertyName !== "transform") return;
-  //console.log(e); check it out
+  //console.log(e); check it out  
   this.classList.remove("playing");
 }
